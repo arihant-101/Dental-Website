@@ -1,7 +1,7 @@
 services:
   - type: web
     name: medicare-wordpress
-    runtime: docker
+    env: docker
     plan: starter
     dockerfilePath: ./Dockerfile
     envVars:
@@ -26,11 +26,10 @@ services:
 
   - type: pserv
     name: medicare-mysql
-    runtime: docker
+    env: docker
     plan: starter
+    dockerImage: mysql:8.0
     dockerCommand: --default-authentication-plugin=mysql_native_password
-    image:
-      url: mysql:8.0
     envVars:
       - key: MYSQL_DATABASE
         value: wordpress
