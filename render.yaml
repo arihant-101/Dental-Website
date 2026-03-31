@@ -28,7 +28,7 @@ services:
     name: medicare-mysql
     env: docker
     plan: starter
-    dockerImage: mysql:8.0
+    dockerfilePath: ./mysql.Dockerfile
     dockerCommand: --default-authentication-plugin=mysql_native_password
     envVars:
       - key: MYSQL_DATABASE
