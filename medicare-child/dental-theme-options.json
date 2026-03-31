@@ -1,0 +1,138 @@
+{
+    "_description": "SmileCare Dental — Theme Options Export. Import via Appearance > Customize > Export/Import",
+    "_theme": "medicare-child",
+    "_version": "2.0.0",
+    "_date": "2026-03-21",
+
+    "boldthemes_theme_options": {
+        "accent_color":           "#0077B6",
+        "alter_color":            "#E8A838",
+        "body_font":              "Montserrat",
+        "heading_font":           "Montserrat",
+        "menu_font":              "Montserrat",
+        "buttons_shape":          "round",
+        "sidebar":                "right",
+        "sidebar_use_dash":       true,
+        "sticky_header":          true,
+        "menu_type":              "hRight",
+        "boxed_menu":             true,
+        "top_tools_in_menu":      true,
+        "capitalize_main_menu":   true,
+        "disable_preloader":      false,
+        "preloader_text":         "SmileCare Dental",
+        "footer_dark_skin":       true,
+        "hide_headline":          false,
+        "custom_text":            "\u00a9 2026 SmileCare Dental. All rights reserved.",
+        "blog_single_view":       "standard",
+        "blog_list_view":         "standard",
+        "blog_author":            true,
+        "blog_date":              true,
+        "blog_use_dash":          true
+    },
+
+    "smilecare_settings": {
+        "smilecare_clinic_name":      "SmileCare Dental",
+        "smilecare_tagline":          "Your Smile, Our Passion",
+        "smilecare_phone":            "(555) 123-4567",
+        "smilecare_emergency_phone":  "(555) 999-0000",
+        "smilecare_email":            "hello@smilecaredental.com",
+        "smilecare_address_line1":    "123 Smile Avenue, Suite 200",
+        "smilecare_address_line2":    "New York, NY 10001",
+        "smilecare_facebook":         "https://facebook.com/smilecaredental",
+        "smilecare_instagram":        "https://instagram.com/smilecaredental",
+        "smilecare_twitter":          "https://twitter.com/smilecaredental",
+        "smilecare_youtube":          "",
+        "smilecare_show_emergency_bar": false,
+        "smilecare_emergency_msg":    "\uD83E\uDDB7 Dental Emergency? Call us now \u2014 24/7 support available!",
+        "smilecare_appointment_btn_text": "Book Appointment",
+        "smilecare_hours_monday":     "9:00 AM \u2013 6:00 PM",
+        "smilecare_hours_tuesday":    "9:00 AM \u2013 6:00 PM",
+        "smilecare_hours_wednesday":  "9:00 AM \u2013 7:00 PM",
+        "smilecare_hours_thursday":   "9:00 AM \u2013 6:00 PM",
+        "smilecare_hours_friday":     "9:00 AM \u2013 5:00 PM",
+        "smilecare_hours_saturday":   "10:00 AM \u2013 3:00 PM",
+        "smilecare_hours_sunday":     "Closed"
+    },
+
+    "recommended_pages": [
+        {
+            "title":    "Home",
+            "slug":     "home",
+            "template": "templates/dental-home.php",
+            "set_as":   "front_page"
+        },
+        {
+            "title":    "Our Services",
+            "slug":     "services",
+            "template": "templates/dental-services.php"
+        },
+        {
+            "title":    "Book Appointment",
+            "slug":     "appointment",
+            "template": "templates/dental-appointment.php"
+        },
+        {
+            "title":    "Meet the Team",
+            "slug":     "team",
+            "template": "templates/dental-team.php"
+        },
+        {
+            "title":    "Before & After Gallery",
+            "slug":     "gallery",
+            "template": "templates/dental-gallery.php"
+        },
+        {
+            "title":    "Contact Us",
+            "slug":     "contact",
+            "template": "templates/dental-contact.php"
+        },
+        {
+            "title":    "Dental Blog",
+            "slug":     "blog",
+            "template": "default"
+        },
+        {
+            "title":    "Privacy Policy",
+            "slug":     "privacy-policy",
+            "template": "default"
+        }
+    ],
+
+    "recommended_menus": {
+        "primary": [
+            "Home",
+            "Our Services",
+            "Meet the Team",
+            "Before & After Gallery",
+            "Dental Blog",
+            "Contact Us",
+            "Book Appointment (button)"
+        ],
+        "footer": [
+            "Home",
+            "Services",
+            "Team",
+            "Gallery",
+            "Blog",
+            "Contact"
+        ]
+    },
+
+    "recommended_plugins": {
+        "required": [
+            "bold-page-builder",
+            "medicare (companion plugin)",
+            "meta-box",
+            "contact-form-7",
+            "sidebar-manager",
+            "bt_cost_calculator"
+        ],
+        "optional": [
+            "yoast-seo",
+            "wordfence",
+            "wp-super-cache",
+            "mailchimp-for-wp",
+            "google-sitemap-generator"
+        ]
+    }
+}

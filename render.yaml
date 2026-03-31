@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: medicare-wordpress
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: WORDPRESS_DB_HOST
+        fromService:
+          type: pserv
+          name: medicare-mysql
+          property: hostport
+      - key: WORDPRESS_DB_NAME
+        value: wordpress
+      - key: WORDPRESS_DB_USER
+        value: wordpress
+      - key: WORDPRESS_DB_PASSWORD
+        fromService:
+          type: pserv
+          name: medicare-mysql
+          envVarKey: MYSQL_PASSWORD
+    disk:
+      name: wp-uploads
+      mountPath: /var/www/html/wp-content/uploads
+      sizeGB: 5
+
+  - type: pserv
+    name: medicare-mysql
+    runtime: docker
+    plan: starter
+    dockerCommand: --default-authentication-plugin=mysql_native_password
+    image:
+      url: mysql:8.0
+    envVars:
+      - key: MYSQL_DATABASE
+        value: wordpress
+      - key: MYSQL_USER
+        value: wordpress
+      - key: MYSQL_PASSWORD
+        generateValue: true
+      - key: MYSQL_ROOT_PASSWORD
+        generateValue: true
+    disk:
+      name: mysql-data
+      mountPath: /var/lib/mysql
+      sizeGB: 10
